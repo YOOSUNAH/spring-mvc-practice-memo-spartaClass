@@ -23,4 +23,6 @@ public class Memo {
         this.username = requestDto.getUsername();
         this.contents = requestDto.getContents();
     }
+
+
 }
