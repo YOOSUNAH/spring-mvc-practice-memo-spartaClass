@@ -1,4 +1,3 @@
-
 package com.sparta.memo.controller;
 
 import com.sparta.memo.dto.MemoRequestDto;
@@ -11,13 +10,12 @@ import java.util.List;
 @RestController
 @RequestMapping("/api")
 public class MemoController {
-    // 제어의 흐름
-    // MemoController -> MemoService -> MemoRepository
 
     private final MemoService memoService;
 
-    public MemoController(MemoService memoService) {
-      this.memoService = memoService;
+    public MemoController(MemoService memoService) { //만들어진 memoService를 외부에서 파라미터로 전달받아서 사용  (재사용하면된다)
+//        this.memoService = new MemoService(jdbcTemplate);
+        this.memoService = memoService;
     }
 
     @PostMapping("/memos")
